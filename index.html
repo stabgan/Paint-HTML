@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Discoveryvip.com</title>
+    <title>HTML Paint</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <style>
@@ -14,11 +14,18 @@
         #drawhere {
             width: 300px;
         }
+
+        a{
+            text-decoration-line: none;
+            color: red;
+            font-family: cursive;
+            font-size: 30px;
+        }
     </style>
 </head>
 
 <body>
-
+    <a href="https://linkedin.com/in/stabgan">Kaustabh Ganguly 2019 - HTML canvas</a>
     <canvas id="myCan" width="800" height="400"></canvas>
     <div id="drawhere">
         <div id="xsave" class="btn btn-primary">Save</div>
@@ -28,7 +35,7 @@
         <label for="pen-width">Choose a stroke width</label>
         <input id="pen-width" type="range" min="1" max="20" />
     </div>
-
+    <h1>Click Save to output in image format and save :</h1>
     <img id="canvasout" style="display:none;">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src='script.js'></script>

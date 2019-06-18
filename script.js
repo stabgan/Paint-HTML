@@ -1,7 +1,6 @@
 var canvas = document.getElementById('myCan');
 var ctx = canvas.getContext('2d');
-var w = canvas.width;
-var h = canvas.height;
+
 var mouse = {
     x: 0,
     y: 0
@@ -10,6 +9,12 @@ var last_mouse = {
     x: 0,
     y: 0
 };
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight-300;
+
+var w = canvas.width;
+var h = canvas.height;
 
 var outputcanvas = document.getElementById('canvasout');
 var pencol = document.getElementById('pen-color');
@@ -36,10 +41,12 @@ canvas.addEventListener('mousemove', function (e) {
 }, false);
 
 canvas.addEventListener('mousedown', function (e) {
+    canvas.style.cursor = "pointer";
     draw('down');
 }, false);
 
 canvas.addEventListener('mouseup', function (e) {
+    canvas.style.cursor = "default";
     draw('up');
 }, false);
 
